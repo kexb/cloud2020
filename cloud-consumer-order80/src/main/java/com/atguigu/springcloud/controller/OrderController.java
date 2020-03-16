@@ -40,10 +40,17 @@ public class OrderController {
     @GetMapping("/consumer/payment/lb")
     public String getPaymentLB() {
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-        if(instances==null||instances.size()<0){
+        if (instances == null || instances.size() < 0) {
             return null;
         }
         URI uri = loadBalancer.instances(instances).getUri();
-        return restTemplate.getForObject(uri+"/payment/lb",String.class);
+        return restTemplate.getForObject(uri + "/payment/lb", String.class);
     }
+
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin() {
+        String result = restTemplate.getForObject("http://localhost:8001/payment/zipkin", String.class);
+        return result;
+    }
+
 }
