@@ -14,3 +14,13 @@ public class MainApp8401 {
         SpringApplication.run(MainApp8401.class, args);
     }
 }
+//[
+//        {
+//        "resource": "/rateLimit/byUrl",
+//        "controlBehavior": 0,
+//        "count": 1,
+//        "grade": 1,
+//        "limitApp": "default",
+//        "strategy": 0
+//        }
+//]
