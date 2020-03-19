@@ -15,8 +15,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 @EnableFeignClients
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-public class SeataAccountMain2001 {
+public class SeataAccountMain2003 {
     public static void main(String[] args) {
-        SpringApplication.run(SeataAccountMain2001.class, args);
+        SpringApplication.run(SeataAccountMain2003.class, args);
     }
 }
